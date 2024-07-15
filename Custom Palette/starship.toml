@@ -1,0 +1,198 @@
+format = """
+[](bg_color_os)\
+$os\
+$username\
+[](fg:bg_color_os bg:bg_color_dir )\
+$directory\
+[](fg:bg_color_dir bg:bg_color_git)\
+$git_branch\
+$git_status\
+[](fg:bg_color_git bg:bg_color_code)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$python\
+$rust\
+$scala\
+[](fg:bg_color_code bg:bg_color_docker)\
+$docker_context\
+[](fg:bg_color_docker bg:bg_color_time)\
+$time\
+[ ](fg:bg_color_time)\
+"""
+
+#add_newline = false	# Disable the blank line at the start of the prompt
+
+# Set the palette variable with the value of palette of your choice
+palette = 'custom_palette'
+
+[palettes.custom_palette]
+bg_color_os = "#06141B"
+bg_color_dir = "#11212D"
+bg_color_git = "#253745"
+bg_color_code = "#4A5C6A"
+bg_color_docker = "#9BA8Ab"
+bg_color_time = "#CCD0CF"
+font_color_os = "#CCD0CF"
+font_color_dir = "#CCD0CF"
+font_color_git = "#CCD0CF"
+font_color_code = "#06141B"
+font_color_docker = "#06141B"
+font_color_time = "#06141B"
+
+
+#SECTION 1
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:bg_color_os fg:font_color_os"
+style_root = "bg:bg_color_os fg:font_color_os"
+format = '[ $user ]($style)'
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+disabled = false
+style = "bg:bg_color_os fg:font_color_os"
+
+# Add the symbol for your preferred OS from the Nerd Font Icons if not listed below
+[os.symbols]
+Windows = " "
+Ubuntu = " "
+Macos = ""
+Linux = ""
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Manjaro = ""
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+#SECTION 2
+[directory]
+style = "fg:font_color_dir bg:bg_color_dir"
+format = "[ $path ]($style)"
+# You can enter how many parent directories to be viewed for the current path
+truncation_length = 2
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Videos" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+#SECTION 3
+[git_branch]
+symbol = ""
+style = "fg:font_color_git bg:bg_color_git"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:font_color_git bg:bg_color_git"
+format = '[($all_status$ahead_behind )]($style)'
+
+
+#SECTION 4
+# Add more language symbols from the Nerd Font Icons and assign the style and format values
+[c]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[elixir]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[elm]
+symbol = " "
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[golang]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[gradle]
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[julia]
+symbol = " "
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[nim]
+symbol = "󰆥"
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[rust]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+[scala]
+symbol = ""
+style = "fg:font_color_code bg:bg_color_code"
+format = '[ $symbol( $version) ]($style)'
+
+#SECTION 5
+[docker_context]
+symbol = ""
+style = "fg:font_color_docker bg:bg_color_docker"
+format = '[ $symbol( $context) ]($style)'
+
+#SECTION 6
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:font_color_time bg:bg_color_time"
+format = '[ $time ]($style)'
+

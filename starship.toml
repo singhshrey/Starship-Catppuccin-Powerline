@@ -207,89 +207,89 @@ truncation_symbol = "…/"
 #SECTION 3
 [git_branch]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol $branch ](fg:base bg:yellow)]($style)'
+style = "fg:base bg:yellow"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:teal"
-format = '[[($all_status$ahead_behind )](fg:base bg:yellow)]($style)'
+style = "fg:base bg:yellow"
+format = '[($all_status$ahead_behind )]($style)'
 
 
 #SECTION 4
 # Add more language symbols from the Nerd Font Icons and assign the style and format values
 [c]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [elixir]
-symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [golang]
-symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [gradle]
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [haskell]
-symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [java]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [nim]
-symbol = "󰆥 "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+symbol = "󰆥"
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [python]
-symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 [scala]
-symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:base bg:green)]($style)'
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol( $version) ]($style)'
 
 #SECTION 5
 [docker_context]
-symbol = ""
-style = "bg:sapphire"
-format = '[[ $symbol( $context) ](fg:base bg:sapphire)]($style)'
+symbol = " "
+style = "fg:base bg:sapphire"
+format = '[ $symbol( $context) ]($style)'
 
 #SECTION 6
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:mauve"
-format = '[[ 󰔟 $time ](fg:base bg:mauve)]($style)'
+style = "fg:base bg:mauve"
+format = '[ 󰔟 $time ]($style)'
